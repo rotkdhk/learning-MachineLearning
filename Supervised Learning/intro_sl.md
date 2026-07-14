@@ -13,7 +13,7 @@ Supervised Learning has 2 types:
 
 ## Regression
 
-Predicting a number from infinitely many possible outputs. Let's say we have data like Temperature vs Number of customers. Now we can predict — if we give `x` temperature, approximately how many customers can visit tomorrow.
+Predicting a number from infinitely many possible outputs. Let's say we have data like Temperature vs Number of customers, now we can predict, if we give `x` temperature, approximately how many customers can visit tomorrow.
 
 ## Classification
 
