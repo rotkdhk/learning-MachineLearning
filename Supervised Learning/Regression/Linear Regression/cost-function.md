@@ -4,7 +4,7 @@
  
 That's exactly what the cost function measures.
  
-![cost function comparison](cost_comparison.png)
+<img width="1050" height="750" alt="image" src="https://github.com/user-attachments/assets/fcccfe09-cd73-440d-812d-c231ed7bb3dd" />
  
 *(Red line = high cost, far from most points. Green line = low cost, near most points — as we saw earlier when comparing the two candidate lines.)*
  
