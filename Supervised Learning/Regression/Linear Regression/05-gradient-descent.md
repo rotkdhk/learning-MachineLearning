@@ -109,7 +109,38 @@ Recall: $\frac{\partial J}{\partial b} = \frac{1}{m}\sum_{i=1}^{m}\left(f(x_i) -
 
   $$w = 2 \to w = 3 \to w = 3.001 \to w = 4 \to w = 4 \to w = 4 \;(\text{similar} \Rightarrow \text{converged})$$
 
-  Once $w$ (and $b$) stop changing meaningfully between steps, we've reached the minimum of $J(w,b)$ — our best-fit line. Because it will produce similar cost function how many times we ran after convergence point.
+## Why We're Trying to Reach the Bottom
 
-  **Initial values:** $w = 0,\; b = 0$ (start here, then let gradient descent do the rest).
+Let's use our familiar dataset again: $x=[1,2,3]$, $y=[2,4,6]$, fixing $b=0$. Here's $J(w)$ and its derivative $\frac{\partial J}{\partial w}$ side by side:
+
+| $w$ | $J(w)$ | $\frac{\partial J}{\partial w}$ |
+|-----|--------|-----------------------------------|
+| 0.0 | 9.33 | −9.33 |
+| 1.0 | 2.33 | −4.67 |
+| 1.5 | 0.58 | −2.33 |
+| **2.0** | **0.00** | **0.00** |
+| 2.5 | 0.58 | +2.33 |
+| 3.0 | 2.33 | +4.67 |
+| 4.0 | 9.33 | +9.33 |
+
+Look at the derivative column: it shrinks steadily as $w$ approaches $2$, hits **exactly zero** at $w=2$, then grows again on the other side. That zero is the "bottom" — the one point on the whole curve where the slope goes flat, and it lines up exactly with $J(w)=0$, the smallest error possible.
+
+### Watching gradient descent actually walk there
+
+Start at $w=0$, with learning rate $\alpha=0.1$, and just apply $w := w - \alpha\frac{\partial J}{\partial w}$ repeatedly:
+
+| Step | $w$ (before) | $\frac{\partial J}{\partial w}$ | Step taken | $w$ (after) | $J(w)$ |
+|------|---------------|-----------------------------------|------------|--------------|--------|
+| 0 | 0.0000 | −9.33 | +0.933 | 0.9333 | 2.65 |
+| 1 | 0.9333 | −4.98 | +0.498 | 1.4311 | 0.76 |
+| 2 | 1.4311 | −2.65 | +0.266 | 1.6966 | 0.21 |
+| 3 | 1.6966 | −1.42 | +0.142 | 1.8382 | 0.061 |
+| 4 | 1.8382 | −0.76 | +0.076 | 1.9137 | 0.017 |
+| 5 | 1.9137 | −0.40 | +0.040 | 1.9540 | 0.0049 |
+
+**Watch the "step taken" column**: 0.933 → 0.498 → 0.266 → 0.142 → 0.076 → 0.040. Each step is roughly **half** the previous one — nobody told it to slow down; it's a direct consequence of the derivative itself shrinking as $w$ nears $2$. And look at $J(w)$: 2.65 → 0.76 → 0.21 → 0.061 → 0.017 → 0.0049 — the error keeps dropping, faster at first, then more gently, exactly matching how the bowl flattens near the bottom.
+
+If we kept going, $w$ would keep creeping closer to $2.000$ and $J(w)$ closer to $0$, but the *steps themselves* would keep shrinking — that's what "convergence" actually looks like in practice, not a sudden stop, but the updates fading out as we near the flat floor of the bowl.
+
+---
   
