@@ -109,7 +109,7 @@ Recall: $\frac{\partial J}{\partial b} = \frac{1}{m}\sum_{i=1}^{m}\left(f(x_i) -
 
   $$w = 2 \to w = 3 \to w = 3.001 \to w = 4 \to w = 4 \to w = 4 \;(\text{similar} \Rightarrow \text{converged})$$
 
-  Once $w$ (and $b$) stop changing meaningfully between steps, we've reached the minimum of $J(w,b)$ — our best-fit line.
+  Once $w$ (and $b$) stop changing meaningfully between steps, we've reached the minimum of $J(w,b)$ — our best-fit line. Because it will produce similar cost function how many times we ran after convergence point.
 
   **Initial values:** $w = 0,\; b = 0$ (start here, then let gradient descent do the rest).
   
