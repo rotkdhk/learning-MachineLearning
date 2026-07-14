@@ -8,20 +8,20 @@ lets understand how ML works in general with 2 examples.
 
 ### Example 1: Email Spam Filter
 
-In GMAIL or any other mailing services we can see the spam filtering how it work? any fixed rules?. No, its all about data we have.
-- Let's say we have 1000 mails and we manually labelled if its spam or not by comparing various factors (aka features in ML) like unknowns sender, grammar mistakes, urgency, etc...
-- For each feature we gave some number 0,1,2,3... and the mention final outcome as **spam** or **not spam**.
+In Gmail, or any other mail service, we can see spam filtering at work. How does it work? Are there any fixed rules? No — it's all about the data we have.
 
-Now with this data let's understand how computer can define if its spam or not
-| Email# | 'Urgent' word | unknown sender | label |
-|-------|-------|-------|-------|
-| e1   | 5     | 1    | SPAM    |
-| e2   | 0    | 0    | NOT SPAM    |
+- Let's say we have 1000 emails and we manually label each one as spam or not, by comparing various factors (called **features** in ML) like unknown sender, grammar mistakes, urgency, and so on.
+- For each feature we assign a number (0, 1, 2, 3...) and note the final outcome as **spam** or **not spam**.
 
-Now we have new email
-| Email# | 'Urgent' word  | unknown sender |
-|-------|-------|-------|
-| ne1   | 4     | 1     |
+Now, with this data, let's understand how the computer can decide whether an email is spam or not.
 
+| Email # | 'Urgent' word | Unknown sender | Label |
+|---------|---------------|----------------|-------|
+| e1      | 5             | 1              | SPAM |
+| e2      | 0             | 0              | NOT SPAM |
 
+Now a new email arrives:
 
+| Email # | 'Urgent' word | Unknown sender |
+|---------|---------------|----------------|
+| ne1     | 4             | 1              |
