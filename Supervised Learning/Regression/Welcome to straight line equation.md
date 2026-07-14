@@ -100,7 +100,7 @@ y = (−0.5)(100) + 100
  
 **Prediction: 100 meters into the cave, it will be 50 cm wide.**
  
-He never had to walk that far to know it — the straight-line pattern from just 4 measurements told him.
+He never had to walk that far to know it, the straight-line pattern from just 4 measurements told him.
 
 ---
 
