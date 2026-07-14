@@ -26,7 +26,7 @@ Notice the errors aren't all the same sign, if the actual point is **above** the
  
 Since positive and negative errors can cancel each other out, we can't just add them up as-is to judge a line. That's exactly why we square each error before combining them, a method called **least squares**, which then becomes the basis of the **cost function**.
  
-*In machine learning, perfection isn't the goal — minimizing the error is.*
+*In machine learning, perfection isn't the goal, minimizing the error is.*
  
 ---
  
