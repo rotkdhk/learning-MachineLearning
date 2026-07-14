@@ -25,3 +25,46 @@ Now a new email arrives:
 | Email # | 'Urgent' word | Unknown sender |
 |---------|---------------|----------------|
 | ne1     | 4             | 1              |
+
+### How does the computer decide? → Distance
+ 
+The computer measures how **close** the new email is to each known email. Closer = more similar.
+ 
+To measure closeness between two points, we use the **distance formula** (Euclidean distance):
+ 
+`distance = √( (x2 − x1)² + (y2 − y1)² )`
+ 
+Here:
+- x = 'Urgent' word count
+- y = Unknown sender
+Our new email **ne1** = (4, 1). Let's find its distance to each known email.
+ 
+**Distance from ne1 (4, 1) to e1 (5, 1):**
+ 
+```
+d = √( (5 − 4)² + (1 − 1)² )
+  = √( (1)²   + (0)²   )
+  = √( 1 + 0 )
+  = √1
+  = 1
+```
+ 
+**Distance from ne1 (4, 1) to e2 (0, 0):**
+ 
+```
+d = √( (0 − 4)² + (0 − 1)² )
+  = √( (−4)²   + (−1)²   )
+  = √( 16 + 1 )
+  = √17
+  ≈ 4.12
+```
+ 
+**Result:**
+ 
+| Compared to | Distance |
+|-------------|----------|
+| e1 (SPAM)     | 1.00 |
+| e2 (NOT SPAM) | 4.12 |
+ 
+ne1 is much closer to **e1** (distance 1) than to e2 (distance 4.12).
+Since e1 is SPAM, the computer predicts **ne1 = SPAM**.
