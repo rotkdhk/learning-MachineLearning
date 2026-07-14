@@ -1,5 +1,5 @@
 
-## The Caveman Story
+## The Caveman Story - Straight Line equation
  
 Imagine a caveman walking into a cave. Right at the entrance, the cave is wide. But as he walks further and further inside, the cave **narrows**, the walls close in a little more with every meter he walks.
  
