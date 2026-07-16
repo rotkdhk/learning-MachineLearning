@@ -2,8 +2,9 @@
 
 ## What is a Gradient?
 
-In general, **gradient** is basically the rate of change **with direction**, for a function of several variables — it's just the collection of **partial derivatives**.
+In general, **gradient** is basically the rate of change **with direction**, **Descent** walks downhall
 
+**Gradient Descent** is step by step process using partial derivatives to find the local minimum of the cost function.
 ## Going back to the Cost Function
 
 $$J(w, b) = \frac{1}{2m}\sum_{i=1}^{m} \left(f_{w,b}(x_i) - y_i\right)^2 \qquad \text{where } f_{w,b}(x_i) = wx_i + b$$
