@@ -5,6 +5,10 @@
 **Feature scaling / data normalization / standardization** — convert a large dataset into small numbers.
  
 The goal: figure out **where each value sits between the high and low** of that feature.
+
+### Why we need it (for multiple linear regression)
+ 
+Features often live on very different scales (e.g. size in thousands of sq ft vs. bedrooms as single digits). When features aren't scaled, gradient descent's updates get skewed — the large-scale feature dominates the gradient step, and the cost function's contours become long, narrow ellipses instead of circles. This makes gradient descent zig-zag and converge slowly (or not at all), instead of taking a direct path to the minimum. Scaling puts all features on comparable ranges so gradient descent converges faster and more smoothly.
  
 ---
  
