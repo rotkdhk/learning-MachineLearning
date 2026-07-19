@@ -6,12 +6,7 @@
 House size vs price. You plotted it. Roughly a line.
 `y = w*x + b` fit fine. Gradient descent solved it. Done.
  
-Now: engagement score vs tenure (your churn project).
-You plot it, expecting the same thing.
- 
-It doesn't line up.
- 
-Drops fast early. Flattens out later. That's a curve, not a line.
+Now there is another data when plot its not line but curve
  
 ## The failed attempt
  
