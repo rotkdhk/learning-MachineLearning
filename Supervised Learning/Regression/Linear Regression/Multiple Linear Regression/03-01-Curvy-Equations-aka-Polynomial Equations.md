@@ -132,3 +132,23 @@ They were the curve memorizing noise, not learning signal.
  
 More features (more powers of x) isn't automatically better.
 Match the degree to the actual shape in the data, not more.
+
+
+---
+
+```python
+import numpy as np
+
+x1 = df['cylinders'].values      # linear
+x2 = df['acceleration'].values   # linear
+x3 = df['weight'].values         # linear
+x4 = df['horsepower'].values     # non-linear
+x5 = df['displacement'].values   # non-linear
+y = df['mpg'].values
+
+#lets say we noticed there is curve nature in horsepower and displacement wrt mpg we need to square for that
+
+x = np.c_[x1, x2, x3, x4, x4**2, x5, x5**2]
+
+#now this is the new input vector to model 
+```
